@@ -47,7 +47,7 @@ Type: `string`
 City name (case-insensitive) from supported locations.
 
 The following locations are supported:
-```json
+```js
 [
     // ACT
     'canberra',
