@@ -1,6 +1,6 @@
 {
     "name": "arpansa-uv-data",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Get UV index data from ARPANSA for multiple locations in Australia and Antarctica",
     "license": "CC0-1.0",
     "repository": "muhashi/arpansa-uv-api",
