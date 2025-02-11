@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 const API_URL = 'https://uvdata.arpansa.gov.au/api/uvlevel/';
 
-// City to coordinates mapping (AEDT timezone cities)
+// City to coordinates mapping
 const CITY_COORDINATES = {
     // ACT
     'canberra': { latitude: -35.31, longitude: 149.2 },
