@@ -87,6 +87,8 @@ test.serial('fetches historical data', async t => {
     });
 
     t.true(result.length >= 14 * 60, 'Should have 14 hours of data');
+    t.is(result[0].timestamp, '2024-01-01 06:00');
+
     await setTimeout(DELAY);
 });
 
@@ -96,7 +98,20 @@ test.serial('handles antarctic stations', async t => {
         date: new Date()
     });
 
-    // Basic polar station validation
     t.true(result.length >= 14 * 60, 'Should return data');
+    await setTimeout(DELAY);
+});
+
+test.serial('handles dates from before data available', async t => {
+    const result = await fetchUVData({
+        location: 'Brisbane',
+        date: new Date(2015, 0, 1)
+    });
+
+    t.true(result.length >= 14 * 60, 'Should return data');
+    t.is(result[0].timestamp, '2015-01-01 06:00');
+    t.is(result[0].forecast, null);
+    t.is(result[0].measured, null);
+
     await setTimeout(DELAY);
 });

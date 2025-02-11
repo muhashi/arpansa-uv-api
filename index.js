@@ -58,7 +58,18 @@ const validateAndFormatDate = (date) => {
     if (!(date instanceof Date) || isNaN(date.getTime())) {
         throw new Error('Invalid date. Must be a valid Date object');
     }
-    return date.toISOString().split('T')[0];
+
+    // Get local date components (need to do this to avoid things getting screwed by timezones...)
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;  // Months are 0-indexed
+    const day = date.getDate();
+
+    // Format with leading zeros and combine
+    return [
+        year.toString(),
+        month.toString().padStart(2, '0'),
+        day.toString().padStart(2, '0')
+    ].join('-');
 };
 
 /**
