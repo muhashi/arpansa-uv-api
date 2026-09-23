@@ -71,7 +71,7 @@ TEST_CITIES.forEach(city => {
 
             // Validate numbers
             t.true(typeof sample.forecast === 'number', 'Forecast should be number');
-            t.true(typeof sample.measured === 'number', 'Measured should be number');
+            t.true(typeof sample.measured === 'number' || sample.measured === null, 'Measured should be number or null');
             t.true(sample.forecast >= 0 && sample.forecast <= 16, 'Forecast should be between 0 and 16');
         }
 

@@ -45,12 +45,12 @@ export default function fetchUVData(options: {
     timestamp: string;
 
     /**
-    Forecast UV index value (may be null for future dates or dates before data is available)
+    Forecast UV index value (may be null for future dates or dates where data is available)
     */
-    forecast: number;
+    forecast: number | null;
 
     /**
-    Measured UV index value (may be null for future dates or dates before data is available)
+    Measured UV index value (may be null for future dates or dates where data is available)
     */
-    measured: number;
+    measured: number | null;
 }>>;

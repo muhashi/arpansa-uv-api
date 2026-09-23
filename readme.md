@@ -106,4 +106,4 @@ Returns a list of forecasted and measured UV indexes in the format:
 ]
 ```
 
-Timestamps are in the local time of the location the data is being retrieved from. Data begins from `2016-11-01`, missing data / future dates will return null for both forecast and measured UV indexes.
+Timestamps are in the local time of the location the data is being retrieved from. Data begins from `2016-11-01`, missing data / future dates will return `null` for UV indexes.
