@@ -39,7 +39,7 @@
         "government"
     ],
     "devDependencies": {
-        "ava": "^7.0.0",
+        "ava": "^8.0.1",
         "typescript": "^7.0.2"
     },
     "dependencies": {
